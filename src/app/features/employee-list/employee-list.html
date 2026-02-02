@@ -1,11 +1,26 @@
 <h2>Employee List</h2>
 
+<form [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+    <input placeholder="Name" formControlName="name" />
+    <input placeholder="Email" formControlName="email" />
+    <input placeholder="Role" formControlName="role" />
+    <input placeholder="Department" formControlName="department" />
+    <button type="submit">
+        {{ selectedEmployeeId() === null ? 'Add Employee' : 'Update Employee' }}
+    </button>
+
+    @if (selectedEmployeeId()) {
+    <button type="button" class ="cancel" (click)="cancelEdit()">Cancel</button>
+    }
+</form>
+
 <table>
     <tr>
         <th>Name</th>
         <th>Email</th>
         <th>Role</th>
         <th>Department</th>
+        <th>Actions</th>
     </tr>
 
     @for (emp of employees(); track emp.id) {
@@ -14,6 +29,10 @@
         <td>{{ emp.email }}</td>
         <td>{{ emp.role }}</td>
         <td>{{ emp.department }}</td>
+        <td>
+            <button (click)="editEmployee(emp)">Edit</button>
+            <button class="delete" (click)="deleteEmployee(emp.id)">Delete</button>
+        </td>
     </tr>
     }
 </table>

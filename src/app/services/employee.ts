@@ -12,4 +12,16 @@ export class Employee {
   getEmployees() {
     return this.http.get<any[]>(this.api);
   }
+
+  addEmployee(data: any) {
+    return this.http.post<any>(this.api, data);
+  }
+
+  updateEmployee(id: number, data: any) {
+    return this.http.put<any>(`${this.api}/${id}`, data);
+  }
+
+  deleteEmployee(id: number) {
+    return this.http.delete<any>(`${this.api}/${id}`);
+  }
 }

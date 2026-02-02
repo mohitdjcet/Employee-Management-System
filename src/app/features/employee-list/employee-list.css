@@ -3,6 +3,46 @@ h2{
     text-align: center;
 }
 
+form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 24px 24px;
+}
+
+input{
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--primary);
+}
+
+button{
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.delete{
+    background: #ef4444;
+}
+
+button.cancel{
+    background: #6b7280;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+
 table{
     width: calc(100% - 48px);
     margin: 0 24px;
