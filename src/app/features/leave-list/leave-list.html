@@ -1,0 +1,23 @@
+<h2>Leaves Requests</h2>
+
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Reason</th>
+        <th>Status</th>
+    </tr>
+
+    @for (leave of leaves(); track leave.id) {
+        <tr>
+            <td>{{leave.employee}}</td>
+            <td>{{leave.reason}}</td>
+            <td>
+                <span class="status" 
+                [class.pending]="leave.status === 'Pending'"
+                [class.approved]="leave.status === 'Approved'">
+                    {{leave.status}}
+                </span>
+            </td>
+        </tr>
+    }
+</table>

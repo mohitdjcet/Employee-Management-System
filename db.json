@@ -21,5 +21,25 @@
       "department": "CSE",
       "id": "512f"
     }
+  ],
+  "Leaves": [
+    {
+      "id":"1",
+      "employee": "Mohit Kumar",
+      "reason": "Medical",
+      "status": "Approved"
+    },
+    {
+      "id":"2",
+      "employee": "Nitin Singh",
+      "reason": "Personal",
+      "status": "Pending"
+    },
+    {
+      "id":"3",
+      "employee": "Rohit Kumar",
+      "reason": "Vacation",
+      "status": "Approved"
+    }
   ]
 }
