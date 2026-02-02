@@ -1,11 +1,38 @@
 <div class="dashboard">
-    <div class="card">
+    <div class="card" (click)="showEmpChart()">
         <h4>Total Employees</h4>
         <p>{{ totalEmployees() }}</p>
     </div>
 
-    <div class="card">
+    <div class="card" (click)="showLeaveChart()">
         <h4>Total Leaves</h4>
         <p>{{ totalLeaves() }}</p>
     </div>
 </div>
+<!-- Chart Section -->
+@if (activeChart() === "employees") {
+    <div class="chart-box">
+        <h3>Employee Distribution</h3>
+
+        <div class="donut employee"></div>
+
+        <div class="legend">
+            <span><i class="it"></i>IT (60%)</span>
+            <span><i class="hr"></i>HR (25%)</span>
+            <span><i class="sales"></i>Sales (15%)</span>
+        </div>
+    </div>
+}
+<!-- Leave Donut -->
+ @if(activeChart() === "leaves"){
+    <div class="chart-box">
+        <h3>Leaves Status</h3>
+
+        <div class="donut leave"></div>
+
+        <div class="legend">
+            <span><i class="approved"></i>Approved (40%)</span>
+            <span><i class="pending"></i>Pending (60%)</span>
+        </div>
+    </div>
+}

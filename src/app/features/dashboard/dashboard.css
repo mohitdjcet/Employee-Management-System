@@ -6,13 +6,105 @@
 }
 
 .card{
-    background-color: #ffffff;
-    border-radius: 10px;
+    background: var(--card-bg);
     padding: 20px;
-    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .card p{
     font-size: 28px;
     font-weight: bold;
+    color: var(--primary);
 }
+
+.card h4{
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Donut-CSS */
+.chart-box {
+  margin: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.chart-box h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+/* donut circle */
+.donut {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* hole inside donut */
+.donut::after {
+  content: '';
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* employee donut */
+.donut.employee {
+  background: conic-gradient(
+    #2563eb 0% 60%,
+    #16a34a 60% 85%,
+    #f97316 85% 100%
+  );
+}
+
+/* leave donut */
+.donut.leave {
+  background: conic-gradient(
+    #facc15 0% 40%,
+    #22c55e 40% 100%
+  );
+}
+
+/* legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.legend i {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.it { background: #2563eb; }
+.hr { background: #16a34a; }
+.sales { background: #f97316; }
+
+.pending { background: #facc15; }
+.approved { background: #22c55e; }
