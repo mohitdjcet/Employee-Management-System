@@ -1,14 +1,27 @@
 .sidebar{
-    width: 200px;
+    width: 240px;
     height: 100vh;
-    background-color: #1e293b;
+    background-color: var(--secondary);
     color: white;
     padding: 24px;
     position: fixed;
 }
 
+.sidebar h2{
+    margin-bottom: 30px;
+}
+
 .sidebar a{
     display: block;
-    margin: 15px 0;
-    cursor: pointer;
+    padding: 12px;
+    color: #cbd5f5;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+
+.sidebar a:hover{
+    background-color: rgba(255, 255, blue255, 0.1);
+    color: white;
 }

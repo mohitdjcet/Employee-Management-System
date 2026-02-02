@@ -1,0 +1,19 @@
+<h2>Employee List</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Department</th>
+    </tr>
+
+    @for (emp of employees(); track emp.id) {
+    <tr>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.role }}</td>
+        <td>{{ emp.department }}</td>
+    </tr>
+    }
+</table>

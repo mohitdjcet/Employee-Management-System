@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Amit Sharma",
+      "email": "amit@gmail.com",
+      "role": "Developer",
+      "department": "IT"
+    },
+    {
+      "id": 2,
+      "name": "Neha Verma",
+      "email": "neha@gmail.com",
+      "role": "HR",
+      "department": "HR"
+    }
+  ]
+}
